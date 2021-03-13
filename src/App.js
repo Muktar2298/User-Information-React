@@ -5,6 +5,7 @@ import './App.css';
 import userData from './fakeData/fakeData.json';
 import { useEffect, useState } from 'react';
 import Users from './Users/Users';
+import User from './User/User';
 
 
 function App() {
@@ -16,9 +17,15 @@ function App() {
    setUsers(userData);
   }, [])
  
+
+  // --EventHandeler--//
+  const handleAddUser = () => {
+    console.log('Added');
+  }
   return (
     <div>
       <Users users ={users}></Users>
+     
     </div>
   );
 }
